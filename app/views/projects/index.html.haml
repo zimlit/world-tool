@@ -1,0 +1,9 @@
+%table
+    - @projects.each do |project|
+        %tr
+            %td 
+                = link_to project.name, "/projects/#{project.id}"
+            %td 
+                = button_to 'Edit', edit_project_path(project), method: 'get'
+            %td 
+                = button_to 'Remove', project, method: :delete, data: { confirm: 'Are you sure?' }

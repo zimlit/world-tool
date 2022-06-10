@@ -1,0 +1,4 @@
+<h1><%= @project.name %></h1>
+<h4><%= @project.description %></h4>
+
+<%= button_to 'Remove', @project, method: :delete, data: { confirm: 'Are you sure?' } %>

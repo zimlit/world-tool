@@ -1,9 +1,11 @@
 #home
     - if user_signed_in?
         %h1.welcome
-            Welcome 
+            Welcome
             = current_user.username
-        = button_to "Sign Out", destroy_user_session_path, method: :delete 
+        = button_to "Edit My Acount", edit_user_registration_path, method: :get 
+        = button_to "Sign Out", destroy_user_session_path, method: :delete
+ 
     - else
         .buttons
             = button_to "Sign In", new_user_session_path, method: :get 

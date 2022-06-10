@@ -1,0 +1,12 @@
+%header
+    %nav#nav
+        %a{:href => "/"} home
+        %a{:href => "/dash"} dashboard
+        %a{:href => "/browse"} browse
+    #nav-dropdown{"data-controller" => "dropdown"}
+        .container 
+            %button#dropbtn{"data-action" => "click->dropdown#showHide"} &#9776;
+        %nav#nav-contents.hide{"data-dropdown-target" => "hideable"}
+            %a{:href => "/"} home
+            %a{:href => "/dash"} dashboard
+            %a{:href => "/browse"} browse

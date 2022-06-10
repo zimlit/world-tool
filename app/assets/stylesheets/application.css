@@ -1,0 +1,118 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body {
+	background-color: #1e1c22;
+	padding: 0;
+	margin: 0;
+    color: #c1c1c1;
+ }
+
+
+#nav {
+    display: flex;
+    justify-content: center;
+    background-color: #403e44;
+    padding: 1em;
+    margin: 0;
+}
+#nav a {
+    flex: 1;
+    text-align: center;
+    background-color: #5e5b64;
+    padding: 1em 0.5em;
+    margin: 0.25em;
+    border-radius: 1em;
+}
+
+#dropbtn {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.1em;
+}
+#nav-contents {
+    display: inline-flex;
+    opacity: 1;
+    position: absolute;
+    z-index: 4;
+    flex-direction: column;
+    background-color: #403e44;
+    filter: drop-shadow(10px 10px 4px #111);
+    margin: 0.5em 0em 1em 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+#nav-contents.show {
+    animation-duration: 0.5s;
+    animation-name: slidein;
+}
+
+#nav-contents.hide {
+    animation-duration: 0.5s;
+    animation-name: slideout;
+    opacity: 0;
+}
+
+
+@keyframes slidein {
+    from {
+        margin-top: -7em;
+
+    }
+
+    to {
+        margin-top: 0.5em;
+    }
+}
+
+@keyframes slideout {
+    from {
+        margin-top: 0.5em;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: -7em;
+        opacity: 1;
+    }
+}
+  
+.container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    background-color: #403e44;
+}
+
+@media screen and (max-width: 480px) {
+    #nav {
+        display: none;
+        background-color: #5500ff;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    #nav-dropdown {
+        display: none;
+    }
+
+}

@@ -106,7 +106,6 @@
 @media screen and (max-width: 480px) {
     #nav {
         display: none;
-        background-color: #5500ff;
     }
 }
 
@@ -115,4 +114,28 @@
         display: none;
     }
 
+}
+
+.welcome {
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.button_to {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.button_to button {
+    padding: 1em 3em;
+    color: #c1c1c1;
+    background-color: #5e5b64;
+    border-radius: 1em;
+    border: none;
 }

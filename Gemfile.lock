@@ -118,7 +118,6 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
-    marked-rails (0.3.2.0)
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
@@ -177,7 +176,6 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
-    redcarpet (3.5.1)
     regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
@@ -242,11 +240,9 @@ DEPENDENCIES
   haml (~> 5.2)
   importmap-rails
   jbuilder
-  marked-rails (~> 0.3.2)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3)
-  redcarpet (~> 3.5)
   selenium-webdriver
   sprockets-rails
   stimulus-rails

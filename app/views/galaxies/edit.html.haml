@@ -1,0 +1,6 @@
+%h3 Update Galaxy Details
+= form_with class: "proj-form", model: @galaxy do |form|
+    = form.text_field :name, placeholder: "name"
+    = form.text_area :description, placeholder: "description", rows: 20
+    = form.hidden_field :project_id, value: @project_id
+    = form.submit

@@ -8,6 +8,11 @@ export default class extends Controller {
     this.desc = this.element.dataset.desc
   }
   connect() {
+    if (this.element.lastElementChild != null) {
+      if (this.element.lastElementChild.classList.contains("desc")) {
+        return
+      }
+    }
     let elem = document.createElement("p")
     elem.innerHTML = DOMPurify.sanitize(marked.parse(this.desc))
     elem.classList.add("desc")

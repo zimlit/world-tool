@@ -1,0 +1,10 @@
+#proj
+  %h1.title
+    = @project.name
+  %div{"data-controller" => "proj", "data-desc" => @project.description}
+  #galaxies
+    %h1 Galaxies 
+
+    = button_to 'Create', new_galaxy_path, params: {:project_id => @project.id}, method: "get"
+  
+  = button_to 'Remove', @project, method: :delete, data: { confirm: 'Are you sure?' }

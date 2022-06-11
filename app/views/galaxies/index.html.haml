@@ -1,0 +1,8 @@
+%table
+    - @galaxies.each do |galaxy|
+        %tr.proj
+            %td{"data-controller" => "proj", "data-desc" => galaxy.description} 
+                = link_to galaxy.name, "/galaxies/#{galaxy.id}"
+                %p 
+                    author:
+                    = User.find(Project.find(galaxy.project_id).user_id).username

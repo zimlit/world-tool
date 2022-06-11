@@ -1,0 +1,5 @@
+%h3 Create a Project
+= form_with class: "proj-form", model: @project do |form|
+  = form.text_field :name, placeholder: "name"
+  = form.text_area :description, placeholder: "description", rows: 20
+  = form.submit

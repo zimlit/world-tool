@@ -139,3 +139,49 @@
     border-radius: 1em;
     border: none;
 }
+
+.proj {
+    display: flex;
+    align-items: center;
+    background-color: #403e44;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.proj-form {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    background-color: #403e44;
+    border-radius: 1em;
+}
+
+.proj-form input {
+    background-color: #5e5b64;
+    color: #c1c1c1;
+    margin: 1em;
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.proj-form textarea {
+    background-color: #5e5b64;
+    color: #c1c1c1;
+    margin: 1em;
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.title {
+    text-align: center;
+}
+
+.desc {
+    text-align: center;
+    font-style: normal;
+    font-size: medium;
+}

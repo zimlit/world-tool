@@ -1,0 +1,7 @@
+#galaxy
+  %h1.title
+    = @galaxy.name
+  %div{"data-controller" => "proj", "data-desc" => @galaxy.description}
+  %h1 Galaxies 
+  
+  = button_to 'Remove', @galaxy, method: :delete, data: { confirm: 'Are you sure?' }

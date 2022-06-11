@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   resources :projects
+  resources :galaxies
 
   root "home#index"
   get "/dash", to: "dash#index"

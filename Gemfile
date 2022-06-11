@@ -74,3 +74,6 @@ end
 gem "haml", "~> 5.2"
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
+gem "redcarpet", "~> 3.5"
+
+gem "marked-rails", "~> 0.3.2"

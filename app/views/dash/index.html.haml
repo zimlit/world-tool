@@ -1,1 +1,12 @@
-dash
+%h1 Projects
+%table
+    - current_user.projects.each do |project|
+        %tr.proj
+            %td{"data-controller" => "proj", "data-desc" => project.description} 
+                = link_to project.name, "/projects/#{project.id}"
+            %td 
+                = button_to 'Edit', edit_project_path(project), method: 'get'
+            %td 
+                = button_to 'Remove', project, method: :delete, data: { confirm: 'Are you sure?' }
+
+= button_to 'Create', new_project_path, method: "get"

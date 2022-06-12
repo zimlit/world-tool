@@ -3,4 +3,5 @@
     = form.text_field :name, placeholder: "name"
     = form.text_area :description, placeholder: "description", rows: 20
     = form.hidden_field :project_id, value: @project_id
+    = hidden_field_tag :url, @url
     = form.submit

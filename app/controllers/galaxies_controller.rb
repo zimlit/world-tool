@@ -23,7 +23,7 @@ class GalaxiesController < ApplicationController
     end
     url = params[:url]
     galaxy = project.galaxies.create(galaxy_params)
-    if url != nil
+    if url != ""
       redirect_to url
     else
       redirect_to galaxies_path
@@ -37,12 +37,18 @@ class GalaxiesController < ApplicationController
       flash[:alert] = "cant edit someone elses galaxy"
     end
     @galaxy.update(galaxy_params)
-    redirect_to galaxy_path(@galaxy)
+    url = params[:url]
+    if url != ""
+      redirect_to url
+    else
+      redirect_to galaxies_path
+    end
   end
 
   def edit
     @galaxy = Galaxy.find(params[:id])
     @project_id = params[:project_id]
+    @url = params[:url]
   end
 
   def destroy
@@ -54,7 +60,7 @@ class GalaxiesController < ApplicationController
     @galaxy.destroy
 
     url = params[:url]
-    if url != nil
+    if url ""
       redirect_to url
     else
       redirect_to galaxies_path

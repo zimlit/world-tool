@@ -6,14 +6,15 @@
     %h1 Galaxies
     %table
       - @project.galaxies.each do |galaxy|
-        %tr.proj
+        %tr.gal
           %td{"data-controller" => "proj", "data-desc" => galaxy.description} 
             = link_to galaxy.name, "/galaxies/#{galaxy.id}"
           %td 
             = button_to 'Edit', edit_galaxy_path(galaxy), params: {:project_id => @project.id}, method: 'get'
           %td 
-            = button_to 'Remove', galaxy, method: :delete, data: { confirm: 'Are you sure?' }
+            = button_to 'Remove', galaxy, params: { :project_id => @project.id, :id => galaxy.id, :url => "/projects/#{@project.id}" }, method: :delete, data: { confirm: 'Are you sure?' }
 
-    = button_to 'Create', new_galaxy_path, params: {:project_id => @project.id}, method: "get"
+    = button_to 'Create', new_galaxy_path, params: {:project_id => @project.id, :url => "/projects/#{@project.id}"}, method: "get"
   
   = button_to 'Remove', @project, method: :delete, data: { confirm: 'Are you sure?' }
+  = button_to 'Edit', edit_project_path(@project), method: 'get'

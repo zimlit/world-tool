@@ -4,4 +4,4 @@
   %div{"data-controller" => "proj", "data-desc" => @galaxy.description}
   
   = button_to 'Remove', @galaxy, method: :delete, data: { confirm: 'Are you sure?' }
-  = button_to 'Edit', edit_galaxy_path(@galaxy), method: 'get'
+  = button_to 'Edit', edit_galaxy_path(@galaxy), params: { :url => "/galaxies/#{@galaxy.id}", :project_id => @galaxy.project_id }, method: 'get'

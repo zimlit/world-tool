@@ -151,7 +151,7 @@
     margin-top: 1em;
 }
 
-.gal {
+.dark-item {
     display: flex;
     align-items: center;
     background-color: #4c4952;
@@ -197,10 +197,18 @@
     font-size: medium;
 }
 
-#galaxies {
+.list-block {
     background-color: #403e44;
     text-align: center;
     margin: 1em;
     border-radius: 1em;
     padding-bottom: 0.1em;
+}
+
+.list-block-no-create {
+    background-color: #403e44;
+    text-align: center;
+    margin: 1em;
+    border-radius: 1em;
+    padding-bottom: 1em;
 }

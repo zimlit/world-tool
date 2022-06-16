@@ -2,11 +2,11 @@
   %h1.title
     = @project.name
   %div{"data-controller" => "proj", "data-desc" => @project.description}
-  #galaxies
+  .list-block
     %h1 Galaxies
     %table
       - @project.galaxies.each do |galaxy|
-        %tr.gal
+        %tr.dark-item
           %td{"data-controller" => "proj", "data-desc" => galaxy.description} 
             = link_to galaxy.name, "/galaxies/#{galaxy.id}"
           %td 
